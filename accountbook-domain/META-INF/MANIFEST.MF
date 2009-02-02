@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Import-Library: org.springframework.spring;version="[2.5.5.A,2.6.0)"
+Import-Bundle: org.springframework.core, com.springsource.org.hibernat
+ e; version="[3.2.6.ga,3.3.0)"
+Built-By: marc
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.accountbook.domain
+Bnd-LastModified: 1230065753256
+Export-Package: org.accountbook.domain
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: accountbook domain model
+Build-Jdk: 1.5.0_16
+Originally-Created-By: Apache Maven Bundle Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: de.mixomat.accountbook
+Tool: Bnd-0.0.255
+
