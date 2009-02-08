@@ -8,6 +8,4 @@ Bundle-Name: Spring OSGi Bundle
 Bnd-LastModified: 1225537722900
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: de.mixomat.accountbook-web
-Import-Package: org.accountbook.web
-
+Bundle-SymbolicName: de.mixomat.accountbook.web
