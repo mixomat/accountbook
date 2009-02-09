@@ -9,7 +9,7 @@
 	<groupId>de.mixomat</groupId>
 	<artifactId>accountbook-web</artifactId>
 	<packaging>bundle</packaging>
-	<name>Spring OSGi Bundle</name>
+	<name>accountbook web module</name>
 	<version>1.0-SNAPSHOT</version>
 	<url>http://www.springframework.org/osgi
 	</url>
@@ -35,13 +35,16 @@
 				<configuration>
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
-						<Bundle-SymbolicName>de.mixomat.accountbook.web</Bundle-SymbolicName>
+						<Bundle-SymbolicName>de.mixomat.accountbook.web
+						</Bundle-SymbolicName>
 						<Export-Package>
 							!org.accountbook.web.internal,org.accountbook.web*
 						</Export-Package>
 						<Import-Package>*</Import-Package>
 						<Include-Resource>src/main/resources
 						</Include-Resource>
+						<Module-Type>Web</Module-Type>
+						<Web-ContextPath>accountbook</Web-ContextPath>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -55,6 +58,33 @@
 						<goals>
 							<goal>manifest</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin
+				</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${spring.dm.server.path}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>target/</directory>
+									<includes>
+										<include>${project.build.finalName}.jar
+										</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -152,6 +182,11 @@
 			</exclusions>
 		</dependency>
 		<dependency>
+		<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.org.apache.commons.logging
 			</artifactId>
@@ -237,9 +272,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.icefaces</groupId>
-			<artifactId>icefaces</artifactId>
-			<version>1.7.2</version>
+			<groupId>de.mixomat</groupId>
+			<artifactId>accountbook-domain</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<type>bundle</type>
 		</dependency>
 	</dependencies>
 	<properties>

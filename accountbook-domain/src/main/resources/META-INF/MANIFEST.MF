@@ -5,9 +5,9 @@ Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-0.0.255
 Bnd-LastModified: 1225307659895
 Bundle-Name: accountbook domain model
-Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Version: 1.0.0
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: de.mixomat.accountbook
+Bundle-SymbolicName: org.accountbook.domain
 Export-Package: org.accountbook.domain
 Import-Library: org.springframework.spring;version="[2.5.5.A,2.6.0)"
 Import-Bundle: org.springframework.core, com.springsource.org.hibernate; version="[3.2.6.ga,3.3.0)"
