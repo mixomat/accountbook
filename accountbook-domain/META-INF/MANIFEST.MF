@@ -7,9 +7,9 @@ Import-Library: org.springframework.spring;version="[2.5.5.A,2.6.0)"
 Created-By: Apache Maven Bundle Plugin
 Import-Bundle: org.springframework.core, com.springsource.org.hibernat
  e; version="[3.2.6.ga,3.3.0)"
-Build-Jdk: 1.6.0_03-p3
+Build-Jdk: 1.6.0_07
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1234221913534
+Bnd-LastModified: 1234302852166
 Bundle-ManifestVersion: 2
 Import-Package: org.accountbook.domain
 Bundle-SymbolicName: de.mixomat.accountbook.domain
