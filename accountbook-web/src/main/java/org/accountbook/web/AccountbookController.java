@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AccountbookController {
 
-	@RequestMapping("/account.html")
+	@RequestMapping("/account.htm")
 	public String account() {
 		return "account";
 	}

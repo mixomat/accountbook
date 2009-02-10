@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Export-Package: org.accountbook.web;uses:="org.springframework.web.bin
  d.annotation,org.springframework.stereotype"
-Private-Package: MODULE-INF
+Private-Package: MODULE-INF.WEB-INF.jsp
 Built-By: marc
 Tool: Bnd-0.0.238
 Bundle-Name: accountbook web module
@@ -11,7 +11,7 @@ Web-ContextPath: accountbook
 Module-Type: Web
 Build-Jdk: 1.6.0_07
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1234299232788
+Bnd-LastModified: 1234301000603
 Bundle-ManifestVersion: 2
 Import-Package: org.accountbook.web,org.springframework.stereotype;ver
  sion="2.5.5.A",org.springframework.web.bind.annotation;version="2.5.5
