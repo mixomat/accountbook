@@ -1,15 +1,20 @@
 Manifest-Version: 1.0
-Export-Package: org.accountbook.web
+Export-Package: org.accountbook.web;uses:="org.springframework.web.bin
+ d.annotation,org.springframework.stereotype"
+Private-Package: MODULE-INF
 Built-By: marc
-Tool: Bnd-0.0.255
+Tool: Bnd-0.0.238
 Bundle-Name: accountbook web module
+Import-Library: org.springframework.spring;version="[2.5.4,3.0.0)"
 Created-By: Apache Maven Bundle Plugin
 Web-ContextPath: accountbook
 Module-Type: Web
-Build-Jdk: 1.6.0_03-p3
+Build-Jdk: 1.6.0_07
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1234221915666
+Bnd-LastModified: 1234299232788
 Bundle-ManifestVersion: 2
-Import-Package: org.accountbook.web
+Import-Package: org.accountbook.web,org.springframework.stereotype;ver
+ sion="2.5.5.A",org.springframework.web.bind.annotation;version="2.5.5
+ .A"
 Bundle-SymbolicName: de.mixomat.accountbook.web
 
