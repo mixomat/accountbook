@@ -2,6 +2,9 @@ package org.accountbook.domain;
 
 import static org.junit.Assert.*;
 
+import org.accountbook.domain.model.Category;
+import org.accountbook.domain.model.Expense;
+import org.accountbook.domain.model.User;
 import org.junit.Test;
 
 /**

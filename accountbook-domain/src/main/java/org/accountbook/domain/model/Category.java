@@ -1,4 +1,4 @@
-package org.accountbook.domain;
+package org.accountbook.domain.model;
 
 /**
  * Categories
