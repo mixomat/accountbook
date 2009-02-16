@@ -3,7 +3,7 @@ Export-Package: org.accountbook.web;uses:="org.springframework.ui,org.
  springframework.web.bind.annotation,org.springframework.stereotype"
 Private-Package: MODULE-INF.WEB-INF.jsp
 Built-By: marc
-Tool: Bnd-0.0.255
+Tool: Bnd-0.0.238
 Bundle-Name: accountbook web module
 Import-Library: org.springframework.spring;version="[2.5.4,3.0.0)"
 Created-By: Apache Maven Bundle Plugin
@@ -11,7 +11,7 @@ Web-ContextPath: accountbook
 Module-Type: Web
 Build-Jdk: 1.6.0_07
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1234302853933
+Bnd-LastModified: 1234602695013
 Bundle-ManifestVersion: 2
 Import-Package: org.accountbook.web,org.springframework.stereotype;ver
  sion="2.5.5.A",org.springframework.ui;version="2.5.5.A",org.springfra
