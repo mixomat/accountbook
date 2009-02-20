@@ -9,6 +9,7 @@
 	<name>accountbook</name>
 	<modules>
 		<module>accountbook-domain</module>
+		<module>accountbook-db</module>
 		<module>accountbook-web</module>
 	</modules>
 	<build>

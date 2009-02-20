@@ -5,7 +5,7 @@ Created-By: Apache Maven Bundle Plugin
 Import-Package: org.accountbook.web,org.springframework.stereotype;ver
  sion="2.5.5.A",org.springframework.ui;version="2.5.5.A",org.springfra
  mework.web.bind.annotation;version="2.5.5.A"
-Bnd-LastModified: 1235168727542
+Bnd-LastModified: 1235170537959
 Export-Package: org.accountbook.web;uses:="org.springframework.web.bin
  d.annotation,org.springframework.stereotype,org.springframework.ui"
 Bundle-Version: 1.0.0.SNAPSHOT
