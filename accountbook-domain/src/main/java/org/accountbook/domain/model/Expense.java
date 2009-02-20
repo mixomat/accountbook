@@ -2,12 +2,15 @@ package org.accountbook.domain.model;
 
 import java.util.List;
 
+import org.accountbook.domain.Entity;
+
 /**
  * Expenses ...
  * 
  * @author marc
  */
-public class Expense {
+public class Expense implements Entity<Expense>{
+
 	private Double amount;
 
 	private boolean cleared;
@@ -17,7 +20,7 @@ public class Expense {
 	private Category category;
 
 	private User user;
-
+	
 	public Double getAmount() {
 		return amount;
 	}
@@ -75,5 +78,10 @@ public class Expense {
 	// @Transient
 	private void clear() {
 		setCleared(true);
+	}
+
+	public boolean sameIdentityAs(Expense other) {
+		// TODO implement identity
+		return false;
 	}
 }
