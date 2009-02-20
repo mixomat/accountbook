@@ -9,7 +9,7 @@
 	<groupId>de.mixomat</groupId>
 	<artifactId>accountbook-domain</artifactId>
 	<packaging>bundle</packaging>
-	<name>accountbook domain model</name>
+	<name>accountbook domain bundle</name>
 	<version>1.0.0-SNAPSHOT</version>
 	<build>
 		<resources>
