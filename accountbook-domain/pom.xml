@@ -6,7 +6,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.mixomat</groupId>
+	<groupId>org.accountbook</groupId>
 	<artifactId>accountbook-domain</artifactId>
 	<packaging>bundle</packaging>
 	<name>accountbook domain bundle</name>
