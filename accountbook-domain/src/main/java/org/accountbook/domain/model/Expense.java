@@ -2,6 +2,7 @@ package org.accountbook.domain.model;
 
 import java.util.List;
 
+import org.accountbook.domain.BaseEntity;
 import org.accountbook.domain.Entity;
 
 /**
@@ -9,7 +10,9 @@ import org.accountbook.domain.Entity;
  * 
  * @author marc
  */
-public class Expense implements Entity<Expense>{
+public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
+	
+	private Long id;
 
 	private Double amount;
 
@@ -20,6 +23,22 @@ public class Expense implements Entity<Expense>{
 	private Category category;
 
 	private User user;
+	
+	/**
+	 * @see org.accountbook.domain.BaseEntity#getId()
+	 */
+	@Override
+	public Long getId() {
+		return id;
+	}
+	
+	/**
+	 * @see org.accountbook.domain.BaseEntity#setId(java.lang.Long)
+	 */
+	@Override
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 	public Double getAmount() {
 		return amount;
@@ -78,10 +97,5 @@ public class Expense implements Entity<Expense>{
 	// @Transient
 	private void clear() {
 		setCleared(true);
-	}
-
-	public boolean sameIdentityAs(Expense other) {
-		// TODO implement identity
-		return false;
 	}
 }

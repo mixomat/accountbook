@@ -1,5 +1,6 @@
 package org.accountbook.domain;
 
+
 /**
  * An entity, as explained in the DDD book.
  *  

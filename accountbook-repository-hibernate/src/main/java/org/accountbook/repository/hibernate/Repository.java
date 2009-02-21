@@ -1,6 +1,5 @@
 package org.accountbook.repository.hibernate;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.accountbook.domain.Entity;
@@ -10,7 +9,7 @@ import org.accountbook.domain.Entity;
  * 
  * @author marc
  */
-public interface Repository<T extends Entity<T>, ID extends Serializable> {
+public interface Repository<T extends Entity<T>> {
 
 	/**
 	 * Load entity by provided unique <code>id</code> (PK)
@@ -19,7 +18,7 @@ public interface Repository<T extends Entity<T>, ID extends Serializable> {
 	 *            unique identifier of entity
 	 * @return entity loaded entity
 	 */
-	T loadById(ID id);
+	T findById(Long id);
 	
 	
 	/**
@@ -27,7 +26,7 @@ public interface Repository<T extends Entity<T>, ID extends Serializable> {
 	 * 
 	 * @return list of loaded entities
 	 */
-	List<T> loadAll();
+	List<T> findAll();
 
 	/**
 	 * Persists the given <code>entity</code>.

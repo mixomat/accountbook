@@ -6,7 +6,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.accountbook.db</groupId>
+	<groupId>org.accountbook</groupId>
 	<artifactId>accountbook-db</artifactId>
 	<packaging>bundle</packaging>
 	<name>accountbook db bundle</name>

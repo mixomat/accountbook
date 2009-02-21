@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-  <!-- regular spring configuration file defining the beans for this
-       bundle. We've kept the osgi definitions in a separate 
-       configuration file so that this file can easily be used
-       for integration testing outside of an OSGi environment -->
-
-
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  					http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+	<!--
+		regular spring configuration file defining the beans for this bundle. We've kept the osgi definitions in a separate configuration file so that this file can
+		easily be used for integration testing outside of an OSGi environment
+	-->
+	<osgi:reference id="dataSource" interface="javax.sql.DataSource" />
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>accountbook.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>hibernate.dialect=org.hibernate.dialect.HSQLDialect</value>
+		</property>
+	</bean>
 </beans>
