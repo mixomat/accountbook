@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-  					http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+  					http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+  					http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	<!--
 		regular spring configuration file defining the beans for this bundle. We've kept the osgi definitions in a separate configuration file so that this file can
 		easily be used for integration testing outside of an OSGi environment
 	-->
-	<osgi:reference id="dataSource" interface="javax.sql.DataSource" />
-	
+	<tx:annotation-driven />
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingResources">
@@ -19,4 +20,10 @@
 			<value>hibernate.dialect=org.hibernate.dialect.HSQLDialect</value>
 		</property>
 	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="expenseRepository" class="org.accountbook.repository.hibernate.HibernateExpenseRepository" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
 </beans>
