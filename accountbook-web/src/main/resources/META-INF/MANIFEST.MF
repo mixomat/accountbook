@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: accountbook web module
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: de.mixomat.accountbook.web
+Bundle-SymbolicName: org.accountbook.web
 Import-Library: org.springframework.spring;version="[2.5.4,3.0.0)"
 Module-Type: Web
 Web-ContextPath: accountbook

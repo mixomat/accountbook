@@ -32,7 +32,6 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 	}
 
 	public List<T> findAll() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -42,13 +41,12 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 	}
 
 	public void saveAll(List<T> entities) {
-		// TODO Auto-generated method stub
-
+		hibernateTemplate.saveOrUpdateAll(entities);
 	}
 
 	public void delete(T entity) {
 		// TODO Auto-generated method stub
-
+		hibernateTemplate.delete(entity);
 	}
 	
 	public void setSessionFactory(SessionFactory sessionFactory) {

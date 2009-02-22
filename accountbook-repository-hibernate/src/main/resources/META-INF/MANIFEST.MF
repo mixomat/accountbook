@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: accountbook hibernate repository module
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.accountbook.repository.hibernate
+Import-Library: org.springframework.spring;version="[2.5.5.A,2.6.0)"

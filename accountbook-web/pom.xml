@@ -35,7 +35,7 @@
 					<unpackBundle>true</unpackBundle>
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
-						<Bundle-SymbolicName>de.mixomat.accountbook.web</Bundle-SymbolicName>
+						<Bundle-SymbolicName>org.accountbook.web</Bundle-SymbolicName>
 						<Export-Package> !org.accountbook.web.internal,org.accountbook.web*</Export-Package>
 						<Import-Package>*</Import-Package>
 						<Include-Resource>src/main/resources</Include-Resource>
@@ -53,31 +53,6 @@
 						<goals>
 							<goal>manifest</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.3</version>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>install</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${spring.dm.server.path}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>target/</directory>
-									<includes>
-										<include>${project.build.finalName}.jar</include>
-									</includes>
-								</resource>
-							</resources>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

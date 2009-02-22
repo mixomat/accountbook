@@ -7,6 +7,6 @@
 
    <context:property-placeholder location="classpath:db.properties" />
 
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" p:url="${jdbc.url}" p:username="${jdbc.username}"
+   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" p:url="${jdbc.url}" p:username="${jdbc.username}"
         p:password="${jdbc.password}" p:driverClassName="${jdbc.driverClassName}" init-method="createDataSource" destroy-method="close"/>
 </beans>

@@ -23,6 +23,31 @@
 						<target>1.5</target>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.3</version>
+					<executions>
+						<execution>
+							<id>copy-resources</id>
+							<phase>install</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${spring.dm.server.path}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>target/</directory>
+										<includes>
+											<include>${project.build.finalName}.jar</include>
+										</includes>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>

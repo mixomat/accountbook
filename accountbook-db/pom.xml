@@ -140,13 +140,10 @@
 				<configuration>
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
-						<Export-Package>!org.mixomat.impl,org.mixomat*</Export-Package>
+						<Export-Package>org.accountbook.db*</Export-Package>
 						<Import-Package>*</Import-Package>
-               <!-- 
-                  add ,plugin.xml if it's present i.e.
-                  src/main/resources,plugin.xml
-               -->
 						<Include-Resource>src/main/resources</Include-Resource>
+						<_include>src/main/resources/META-INF/MANIFEST.MF</_include>
 					</instructions>
 				</configuration>
 			</plugin>
