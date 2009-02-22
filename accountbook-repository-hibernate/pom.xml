@@ -9,54 +9,54 @@
 	<groupId>org.accountbook</groupId>
 	<artifactId>accountbook-repository-hibernate</artifactId>
 	<packaging>bundle</packaging>
-	<name>Spring dm Bundle</name>
+	<name>accountbook hibernate repository bundle</name>
 	<version>1.0.0-SNAPSHOT</version>
 	<url>http://www.springframework.org/osgi</url>
 	<properties>
-		<slf4j.version>1.4.3</slf4j.version>
-		<spring.maven.artifact.version>2.5.6</spring.maven.artifact.version>
-		<spring.osgi.version>1.0.2</spring.osgi.version>
+		<slf4j.version>1.5.6</slf4j.version>
+		<spring.maven.artifact.version>2.5.5.A</spring.maven.artifact.version>
+		<spring.osgi.version>1.1.2.B</spring.osgi.version>
 		<equinox.ver>3.2.2</equinox.ver>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
+			<artifactId>org.springframework.core</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<artifactId>org.springframework.context</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
+			<artifactId>org.springframework.orm</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
+			<artifactId>org.springframework.jdbc</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
+			<artifactId>org.springframework.beans</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>jcl104-over-slf4j</artifactId>
+			<artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
+			<artifactId>com.springsource.slf4j.log4j</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
@@ -64,36 +64,56 @@
 			<artifactId>org.osgi.core</artifactId>
 			<version>4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>com.springsource.javax.transaction</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.accountbook</groupId>
+			<artifactId>accountbook-domain</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.accountbook</groupId>
+			<artifactId>accountbook-db</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 
 	<!-- test scoped dependencies -->
 		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>junit.osgi</artifactId>
-			<version>3.8.2-SNAPSHOT</version>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+			<version>4.4.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
+			<artifactId>org.springframework.test</artifactId>
 			<version>${spring.maven.artifact.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-test</artifactId>
+			<artifactId>org.springframework.osgi.test</artifactId>
 			<version>${spring.osgi.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-annotation</artifactId>
-			<version>${spring.osgi.version}</version>
+			<groupId>org.aopalliance</groupId>
+			<artifactId>com.springsource.org.aopalliance</artifactId>
+			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>aopalliance.osgi</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>com.springsource.org.hsqldb</artifactId>
+			<version>1.8.0.9</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -112,36 +132,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>log4j.osgi</artifactId>
-			<version>1.2.15-SNAPSHOT</version>
+			<groupId>org.apache.log4j</groupId>
+			<artifactId>com.springsource.org.apache.log4j</artifactId>
+			<version>1.2.15</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate</artifactId>
-			<version>3.3.1.GA</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.transaction</groupId>
-			<artifactId>com.springsource.javax.transaction</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>com.springsource.org.hsqldb</artifactId>
-			<version>1.8.0.9</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.accountbook</groupId>
-			<artifactId>accountbook-domain</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.accountbook</groupId>
-			<artifactId>accountbook-db</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -173,12 +167,9 @@
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
 						<Export-Package>!org.accountbook.repository.hibernate.internal,org.accountbook.repository.hibernate*</Export-Package>
-						<Import-Package>*</Import-Package>
-               <!-- 
-                  add ,plugin.xml if it's present i.e.
-                  src/main/resources,plugin.xml
-               -->
+						<Import-Package>javax.sql, *</Import-Package>
 						<Include-Resource>src/main/resources</Include-Resource>
+						<_include>src/main/resources/META-INF/MANIFEST.MF</_include>
 					</instructions>
 				</configuration>
 			</plugin>
