@@ -28,6 +28,13 @@ public class HibernateExpenseRepositoryTest {
 	
 	@Test
 	public void testLoadById() throws Exception {
+		Expense expense = new Expense();
+		expense.setAmount(20.0);
+		
+		// persist expense first
+		expenseRepository.save(expense);
+		
 		assertNotNull(expenseRepository.findById(1l));
+		assertEquals(new Long(1l), expenseRepository.findById(1l).getId());
 	}
 }

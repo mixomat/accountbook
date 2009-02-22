@@ -17,7 +17,12 @@
 			</list>
 		</property>
 		<property name="hibernateProperties">
-			<value>hibernate.dialect=org.hibernate.dialect.HSQLDialect</value>
+			<value>
+				hibernate.dialect=org.hibernate.dialect.HSQLDialect
+				hibernate.hbm2ddl.auto=create
+				hibernate.show_sql=true
+				hibernate.format_sql=true
+			</value>
 		</property>
 	</bean>
 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">

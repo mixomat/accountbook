@@ -37,8 +37,8 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 	}
 
 	public void save(T entity) {
-		// TODO Auto-generated method stub
-
+		assert (entity != null);
+		hibernateTemplate.save(entity);
 	}
 
 	public void saveAll(List<T> entities) {
