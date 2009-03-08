@@ -109,6 +109,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.osgi</groupId>
+			<artifactId>org.springframework.osgi.test</artifactId>
+			<version>${spring.osgi.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.aopalliance</groupId>
 			<artifactId>com.springsource.org.aopalliance</artifactId>
 			<version>1.0.0</version>
@@ -143,6 +148,11 @@
 			<id>eclipse-repository</id>
 			<name>Eclipse Repository</name>
 			<url>http://repo1.maven.org/eclipse/</url>
+		</repository>
+		<repository>
+			<id>jboss-repo</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.com/maven2/</url>
 		</repository>
 	</repositories>
 </project>

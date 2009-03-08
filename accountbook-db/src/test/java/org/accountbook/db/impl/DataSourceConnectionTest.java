@@ -31,8 +31,8 @@ public class DataSourceConnectionTest {
 	@Test
 	public void testDataSourceConnection() throws Exception {
 		Connection connection = dataSource.getConnection();
+		assertNotNull(connection);
 		DatabaseMetaData metaData = connection.getMetaData();
-		
 		assertEquals("HSQL Database Engine",metaData.getDatabaseProductName());
 	}
 }
