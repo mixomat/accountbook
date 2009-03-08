@@ -1,154 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>accountbook</artifactId>
 		<groupId>de.mixomat</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
+	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.accountbook</groupId>
 	<artifactId>accountbook-repository-hibernate</artifactId>
 	<packaging>bundle</packaging>
 	<name>accountbook hibernate repository bundle</name>
 	<version>1.0.0-SNAPSHOT</version>
-	<url>http://www.springframework.org/osgi</url>
-	<properties>
-		<slf4j.version>1.5.6</slf4j.version>
-		<spring.maven.artifact.version>2.5.5.A</spring.maven.artifact.version>
-		<spring.osgi.version>1.1.2.B</spring.osgi.version>
-		<equinox.ver>3.2.2</equinox.ver>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.core</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.context</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.orm</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.jdbc</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.beans</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.log4j</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate</artifactId>
-			<version>3.3.1.GA</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.transaction</groupId>
-			<artifactId>com.springsource.javax.transaction</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.accountbook</groupId>
-			<artifactId>accountbook-domain</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.accountbook</groupId>
-			<artifactId>accountbook-db</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-
-	<!-- test scoped dependencies -->
-		<dependency>
-			<groupId>org.junit</groupId>
-			<artifactId>com.springsource.org.junit</artifactId>
-			<version>4.4.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.test</artifactId>
-			<version>${spring.maven.artifact.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.test</artifactId>
-			<version>${spring.osgi.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.aopalliance</groupId>
-			<artifactId>com.springsource.org.aopalliance</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>com.springsource.org.hsqldb</artifactId>
-			<version>1.8.0.9</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils</artifactId>
-			<version>2.2</version>
-			<scope>test</scope>
-		</dependency>
-	
-	<!-- Equinox OSGi platform -->
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>${equinox.ver}</version>
-			<type>jar</type>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.log4j</groupId>
-			<artifactId>com.springsource.org.apache.log4j</artifactId>
-			<version>1.2.15</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-  <!-- for packaging as an OSGi bundle, we use the maven-bundle-plugin -->
-  
-  <!-- see http://felix.apache.org/site/maven-bundle-plugin-bnd.html for more info -->
 	<build>
 		<resources>
-      <!-- standard Maven folder -->
 			<resource>
 				<directory>src/main/resources</directory>
 			</resource>
-      <!-- plus root folder -->
 			<resource>
 				<directory>.</directory>
 				<includes>
@@ -173,8 +40,6 @@
 					</instructions>
 				</configuration>
 			</plugin>
-      
-      <!-- generate manifest automatically once the classes are processed -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -190,49 +55,49 @@
 			</plugin>
 		</plugins>
 	</build>
-  
-  <!-- ================================================ -->
-  <!--            Repository Configuration              -->
-  <!-- ================================================ -->
-	<repositories>
-		<repository>
-			<id>apache.m2.incubator</id>
-			<name>Apache M2 Incubator Repository</name>
-			<url>http://people.apache.org/repo/m2-incubating-repository/</url>
-		</repository>
-		<repository>
-			<id>eclipse-repository</id>
-			<name>Eclipse Repository</name>
-			<url>http://repo1.maven.org/eclipse/</url>
-		</repository>
-		<repository>
-			<id>safehaus-repository</id>
-			<name>Safehaus Repository</name>
-			<url>http://m2.safehaus.org</url>
-		</repository>
-		<repository>
-			<id>spring-ext</id>
-			<name>Spring External Dependencies Repository</name>
-			<url>https://springframework.svn.sourceforge.net/svnroot/springframework/repos/repo-ext/</url>
-		</repository>
-		<repository>
-			<id>i21-s3-osgi-repo</id>
-			<name>i21 osgi artifacts repo</name>
-			<snapshots>
-			</snapshots>
-			<url>http://s3.amazonaws.com/maven.springframework.org/osgi</url>
-		</repository>
-		<repository>
-			<id>i21-s3-maven-repo</id>
-			<name>i21 S3 milestone repo</name>
-			<url>http://s3.amazonaws.com/maven.springframework.org/milestone</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-repo</id>
-			<name>maven repo</name>
-			<url>http://repo1.maven.org/maven2/</url>
-		</pluginRepository>
-	</pluginRepositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.orm</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.jdbc</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>com.springsource.javax.transaction</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.accountbook</groupId>
+			<artifactId>accountbook-domain</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.accountbook</groupId>
+			<artifactId>accountbook-db</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<!-- test scoped dependencies -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>com.springsource.org.hsqldb</artifactId>
+			<version>1.8.0.9</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils</artifactId>
+			<version>2.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>

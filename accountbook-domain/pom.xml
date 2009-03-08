@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<artifactId>accountbook</artifactId>
 		<groupId>de.mixomat</groupId>
@@ -33,12 +33,9 @@
 				<configuration>
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
-						<Export-Package>
-							!org.accountbook.domain.internal,org.accountbook.domain*
-						</Export-Package>
+						<Export-Package> !org.accountbook.domain.internal,org.accountbook.domain*</Export-Package>
 						<Import-Package>*</Import-Package>
-						<Include-Resource>src/main/resources
-						</Include-Resource>
+						<Include-Resource>src/main/resources</Include-Resource>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -57,8 +54,7 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin
-				</artifactId>
+				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.3</version>
 				<executions>
 					<execution>
@@ -73,8 +69,7 @@
 								<resource>
 									<directory>target/</directory>
 									<includes>
-										<include>${project.build.finalName}.jar
-										</include>
+										<include>${project.build.finalName}.jar</include>
 									</includes>
 								</resource>
 							</resources>
@@ -84,182 +79,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<snapshots />
-			<id>i21-s3-osgi-repo</id>
-			<name>i21 osgi artifacts repo</name>
-			<url>http://maven.springframework.org/osgi
-			</url>
-		</repository>
-		<repository>
-			<id>i21-s3-maven-repo</id>
-			<name>i21 S3 milestone repo</name>
-			<url>http://maven.springframework.org/milestone
-			</url>
-		</repository>
-		<repository>
-			<id>com.springsource.repository.bundles.external
-			</id>
-			<name>SpringSource Enterprise Bundle Repository -
-				External Bundle Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/external
-			</url>
-		</repository>
-		<repository>
-			<id>eclipse-repository</id>
-			<name>Eclipse Repository</name>
-			<url>http://repo1.maven.org/eclipse/
-			</url>
-		</repository>
-		<repository>
-			<id>spring-ext</id>
-			<name>Spring External Dependencies Repository</name>
-			<url>
-				https://springframework.svn.sourceforge.net/svnroot/springframework/repos/repo-ext/
-			</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-repo</id>
-			<name>maven repo</name>
-			<url>http://repo1.maven.org/maven2/
-			</url>
-		</pluginRepository>
-	</pluginRepositories>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-			<version>${spring.maven.artifact.version}
-			</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.maven.artifact.version}
-			</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.maven.artifact.version}
-			</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>aopalliance</artifactId>
-					<groupId>aopalliance</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.org.apache.commons.logging
-			</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.api
-			</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.log4j
-			</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>provided</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>log4j</artifactId>
-					<groupId>log4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>com.springsource.org.apache.log4j
-					</artifactId>
-					<groupId>org.apache.log4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.junit</groupId>
-			<artifactId>com.springsource.junit</artifactId>
-			<version>3.8.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.maven.artifact.version}
-			</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>junit</artifactId>
-					<groupId>junit</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-test</artifactId>
-			<version>${spring.osgi.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-annotation</artifactId>
-			<version>${spring.osgi.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.aopalliance</groupId>
-			<artifactId>com.springsource.org.aopalliance
-			</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>${equinox.ver}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>log4j.osgi</artifactId>
-			<version>1.2.15-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	<properties>
-		<equinox.ver>3.2.2</equinox.ver>
-		<spring.maven.artifact.version>2.5.5
-		</spring.maven.artifact.version>
-		<slf4j.version>1.5.0</slf4j.version>
-		<spring.osgi.version>1.1.2</spring.osgi.version>
-	</properties>
 </project>

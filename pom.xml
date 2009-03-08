@@ -12,6 +12,13 @@
 		<module>accountbook-web</module>
 		<module>accountbook-repository-hibernate</module>
 	</modules>
+	<properties>
+		<slf4j.version>1.5.6</slf4j.version>
+		<spring.maven.artifact.version>2.5.5.A</spring.maven.artifact.version>
+		<spring.osgi.version>1.1.2.B</spring.osgi.version>
+		<equinox.ver>3.2.2</equinox.ver>
+		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.0.RELEASE/pickup</spring.dm.server.path>
+	</properties>
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -53,9 +60,71 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.core</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.context</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.beans</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.log4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>4.0</version>
+		</dependency>
+
+	<!-- test scoped dependencies -->
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+			<version>4.4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.test</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aopalliance</groupId>
+			<artifactId>com.springsource.org.aopalliance</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.osgi</groupId>
+			<artifactId>org.eclipse.osgi</artifactId>
+			<version>${equinox.ver}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.log4j</groupId>
+			<artifactId>com.springsource.org.apache.log4j</artifactId>
+			<version>1.2.15</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -70,8 +139,10 @@
 			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
+		<repository>
+			<id>eclipse-repository</id>
+			<name>Eclipse Repository</name>
+			<url>http://repo1.maven.org/eclipse/</url>
+		</repository>
 	</repositories>
-	<properties>
-		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.0.RELEASE/pickup</spring.dm.server.path>
-	</properties>
 </project>
