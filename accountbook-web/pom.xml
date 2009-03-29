@@ -8,50 +8,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.accountbook</groupId>
 	<artifactId>accountbook.web</artifactId>
-	<packaging>bundle</packaging>
+	<packaging>jar</packaging>
 	<name>accountbook web bundle</name>
 	<version>1.0.0-SNAPSHOT</version>
 	<url>http://www.springframework.org/osgi</url>
 	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-			</resource>
-			<resource>
-				<directory>.</directory>
-				<includes>
-					<include>plugin.xml</include>
-					<include>META-INF/*</include>
-				</includes>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>1.4.0</version>
-				<extensions>true</extensions>
-				<configuration>
-					<unpackBundle>true</unpackBundle>
-					<manifestLocation>META-INF</manifestLocation>
-					<instructions>
-						<Bundle-SymbolicName>org.accountbook.web</Bundle-SymbolicName>
-						<Export-Package> !org.accountbook.web.internal,org.accountbook.web*</Export-Package>
-						<Import-Package>*</Import-Package>
-						<Include-Resource>src/main/resources</Include-Resource>
-						<_include>src/main/resources/META-INF/MANIFEST.MF</_include>
-					</instructions>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
+				<groupId>com.springsource.bundlor</groupId>
+				<artifactId>com.springsource.bundlor.maven</artifactId>
+				<version>1.0.0.M2</version>
 				<executions>
 					<execution>
-						<id>bundle-manifest</id>
-						<phase>process-classes</phase>
+						<id>bundlor</id>
 						<goals>
-							<goal>manifest</goal>
+							<goal>transform</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -68,7 +39,6 @@
 			<groupId>org.accountbook</groupId>
 			<artifactId>accountbook-domain</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
-			<type>bundle</type>
 		</dependency>
 	</dependencies>
 </project>
