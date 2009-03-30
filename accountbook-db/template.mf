@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Version: 1.0.0
 Bundle-Name: accountbook db module
 Bundle-SymbolicName: org.accountbook.db
 Import-Bundle: com.springsource.org.hsqldb;version="[1.8.0.9,1.9.0)"
