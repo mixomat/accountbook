@@ -3,5 +3,3 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: accountbook db module
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.accountbook.db
-Import-Package: javax.sql
-Import-Bundle: com.springsource.org.apache.commons.dbcp; version="[1.2.2.osgi,1.2.2.osgi]", com.springsource.org.hsqldb; version="[1.8.0.9,1.8.0.9]"

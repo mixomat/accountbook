@@ -15,9 +15,9 @@
 	<properties>
 		<slf4j.version>1.5.6</slf4j.version>
 		<spring.maven.artifact.version>2.5.5.A</spring.maven.artifact.version>
-		<spring.osgi.version>1.1.2.B</spring.osgi.version>
+		<spring.osgi.version>1.1.1.A</spring.osgi.version>
 		<equinox.ver>3.2.2</equinox.ver>
-		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.0.RELEASE/pickup</spring.dm.server.path>
+		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.1.RELEASE/pickup</spring.dm.server.path>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -57,6 +57,21 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>com.springsource.bundlor</groupId>
+				<artifactId>com.springsource.bundlor.maven</artifactId>
+				<version>1.0.0.M2</version>
+				<executions>
+					<execution>
+						<id>bundlor</id>
+						<goals>
+							<goal>transform</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
@@ -120,13 +135,10 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>${equinox.ver}</version>
-			<type>jar</type>
-			<scope>test</scope>
-		</dependency>
+		<!--
+			<dependency> <groupId>org.eclipse.osgi</groupId> <artifactId>org.eclipse.osgi</artifactId> <version>${equinox.ver}</version> <type>jar</type>
+			<scope>test</scope> </dependency>
+		-->
 		<dependency>
 			<groupId>org.apache.log4j</groupId>
 			<artifactId>com.springsource.org.apache.log4j</artifactId>
@@ -156,4 +168,11 @@
 			<url>http://repository.jboss.com/maven2/</url>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>com.springsource.repository.bundles.milestone</id>
+			<name>SpringSource Enterprise Bundle Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
