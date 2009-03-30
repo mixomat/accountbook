@@ -13,21 +13,6 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<url>http://www.springframework.org/osgi</url>
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>com.springsource.bundlor</groupId>
-				<artifactId>com.springsource.bundlor.maven</artifactId>
-				<version>1.0.0.M2</version>
-				<executions>
-					<execution>
-						<id>bundlor</id>
-						<goals>
-							<goal>transform</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
