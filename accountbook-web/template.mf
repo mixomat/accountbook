@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: org.accountbook.web  
+Bundle-Version: 1.0.0
 Bundle-Name: accountbook web module  
-Bundle-Vendor: accountbook  
+Bundle-SymbolicName: org.accountbook.web  
 Module-Type: Web
 Web-ContextPath: accountbook
 Import-Library: org.springframework.spring;version="[2.5.5.A,3.0.0)" 
