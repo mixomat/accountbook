@@ -23,7 +23,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:META-INF/spring/bundle-context.xml"})
-public class DataSourceConnectionTest {
+public class DataSourceConnectionIntegrationTest {
 
 	@Autowired
 	private DataSource dataSource;

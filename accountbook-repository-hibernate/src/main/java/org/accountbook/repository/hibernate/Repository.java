@@ -18,7 +18,7 @@ public interface Repository<T extends Entity<T>> {
 	 *            unique identifier of entity
 	 * @return entity loaded entity
 	 */
-	T findById(Long id);
+	T find(Long id);
 	
 	
 	/**

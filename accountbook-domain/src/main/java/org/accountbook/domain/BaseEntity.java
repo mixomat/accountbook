@@ -3,12 +3,11 @@ package org.accountbook.domain;
 /**
  * Base bean for all domain model classes.
  * 
- * Implements {@link equals(Object other)} {@link hashCode()}, which is required for ORM entity comparison.
+ * Implements {@link equals(Object other)} {@link hashCode()} for ORM entity comparison.
  * 
  *  
  * @author marc
- * @param <T>
- *
+ * @since 1.0.0
  */
 public abstract class BaseEntity<T> implements Entity<T> {
 

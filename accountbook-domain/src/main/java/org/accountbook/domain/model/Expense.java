@@ -1,6 +1,6 @@
 package org.accountbook.domain.model;
 
-import java.util.List;
+import java.util.Set;
 
 import org.accountbook.domain.BaseEntity;
 import org.accountbook.domain.Entity;
@@ -88,7 +88,7 @@ public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
 
 	// @Transient
 	public void clearExpensesForUser(User user) {
-		List<Expense> expenses = user.getExpenses();
+		Set<Expense> expenses = user.getExpenses();
 		for (Expense expense : expenses) {
 			expense.clear();
 		}

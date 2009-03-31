@@ -1,9 +1,10 @@
-package org.accountbook.repository.hibernate;
+package org.accountbook.repository.hibernate.internal;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.accountbook.domain.Entity;
+import org.accountbook.repository.hibernate.Repository;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
@@ -27,7 +28,7 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 	}
 
 	@SuppressWarnings("unchecked")
-	public T findById(Long id) {
+	public T find(Long id) {
 		return (T) hibernateTemplate.get(persistentClass, id);
 	}
 
