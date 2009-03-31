@@ -12,4 +12,9 @@ public class AccountbookController {
 		model.addAttribute("name", "account name");
 		return "account";
 	}
+	
+	@RequestMapping("/expense.htm")
+	public String expenses(ModelMap model) {
+		return "expense";
+	}
 }
