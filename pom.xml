@@ -167,6 +167,11 @@
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
 		<repository>
+			<id>com.springsource.repository.bundles.milestone</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Milestones</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</repository>
+		<repository>
 			<id>eclipse-repository</id>
 			<name>Eclipse Repository</name>
 			<url>http://repo1.maven.org/eclipse/</url>
