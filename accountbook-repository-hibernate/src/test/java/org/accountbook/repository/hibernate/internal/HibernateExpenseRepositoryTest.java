@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.accountbook.repository.hibernate.internal;
 
 import static org.junit.Assert.*;
@@ -47,14 +44,18 @@ public class HibernateExpenseRepositoryTest {
 	@Test
 	public void testFindWithAssociationMappings() throws Exception {
 		Expense expense = new Expense();
+		expense.setAmount(13.45);
 		User user = new User("katja");
 		expense.setUser(user);
 		
 		expenseRepository.save(expense);
-		expense = expenseRepository.find(1l);
-		assertNotNull(expense);
-		assertNotNull(expense.getUser());
-		assertEquals("user name should match","katja",expense.getUser().getName());
+		Long id = expense.getId();
+		assertNotNull(id);
+		
+		Expense expense2 = expenseRepository.find(id);
+		assertNotNull(expense2);
+		assertNotNull(expense2.getUser());
+		assertEquals("user name should match","katja",expense2.getUser().getName());
 	}
 	
 	

@@ -46,8 +46,11 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 	}
 
 	public void delete(T entity) {
-		// TODO Auto-generated method stub
 		hibernateTemplate.delete(entity);
+	}
+	
+	public void flush() {
+		hibernateTemplate.flush();
 	}
 	
 	public void setSessionFactory(SessionFactory sessionFactory) {

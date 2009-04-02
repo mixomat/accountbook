@@ -8,10 +8,10 @@
 		<id name="id" column="id">
 			<generator class="org.hibernate.id.IdentityGenerator" />
 		</id>
-		<property name="amount" column="amount" />
+		<property name="amount" column="amount" not-null="true" />
 		<property name="cleared" column="cleared" type="boolean" />
 		<property name="description" column="description" />
-		<many-to-one name="user" column="user" cascade="all" not-null="true"/>
+		<many-to-one name="user" column="user" cascade="save-update" not-null="true"/>
 	</class>
 	<class name="org.accountbook.domain.model.User" table="Users">
 		<id name="id" column="id">

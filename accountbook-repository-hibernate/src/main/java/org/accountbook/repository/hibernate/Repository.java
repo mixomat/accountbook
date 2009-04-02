@@ -52,4 +52,8 @@ public interface Repository<T extends Entity<T>> {
 	 */
 	void delete(T entity);
 
+	/**
+	 * Flushes the current database session.
+	 */
+	void flush();
 }
