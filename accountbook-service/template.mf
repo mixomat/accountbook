@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0
+Bundle-Name: accountbook service module
+Bundle-SymbolicName: org.accountbook.service
+Import-Package: org.accountbook.repository.hibernate;version="1.0.0"
+Import-Template: org.accountbook.*;version="[1.0.0,1.1.0)",
+ org.apache.commons.lang;version="[2.4.0,2.5.0)"
