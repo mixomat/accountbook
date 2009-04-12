@@ -11,7 +11,7 @@
 		<property name="amount" column="amount" not-null="true" />
 		<property name="cleared" column="cleared" type="boolean" />
 		<property name="description" column="description" />
-		<many-to-one name="user" column="user" cascade="save-update" not-null="true"/>
+		<many-to-one name="user" column="userId" cascade="save-update" not-null="true"/>
 	</class>
 	<class name="org.accountbook.domain.model.User" table="Users">
 		<id name="id" column="id">
