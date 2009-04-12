@@ -12,6 +12,12 @@
 		<property name="cleared" column="cleared" type="boolean" />
 		<property name="description" column="description" />
 		<many-to-one name="user" column="userId" cascade="save-update" not-null="true"/>
+		<component name="Category" class="org.accountbook.domain.model.Category">
+			<property name="name" column="categoryName"/>
+			<component name="Percentage" class="org.accountbook.domain.model.Percentage">
+				<property name="amount" column="percentage" />
+			</component>
+		</component>
 	</class>
 	<class name="org.accountbook.domain.model.User" table="Users">
 		<id name="id" column="id">

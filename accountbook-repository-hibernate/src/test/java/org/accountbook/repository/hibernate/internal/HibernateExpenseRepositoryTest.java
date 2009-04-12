@@ -58,5 +58,27 @@ public class HibernateExpenseRepositoryTest {
 		assertEquals("user name should match","katja",expense2.getUser().getName());
 	}
 	
+	@Test
+	public void testClearExpense() throws Exception {
+		User marc = new User("marc");
+
+		Expense expense = new Expense();
+		expense.setAmount(29.39);
+		expense.setUser(marc);
+		expenseRepository.save(expense);
+
+
+		Expense expense2 = new Expense();
+		expense2.setAmount(3.09);
+		expense2.setUser(marc);
+		expenseRepository.save(expense2);
+
+		expense2.clearExpensesForUser(marc);
+		
+		for (Expense testExpense : marc.getExpenses()) {
+			assertTrue(testExpense.isCleared());
+		}
+	}
+	
 	
 }
