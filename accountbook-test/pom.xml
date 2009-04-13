@@ -10,6 +10,6 @@
 	<artifactId>accountbook-test</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>dm bundle archetype</name>
+	<name>accountbook test</name>
 	<url>http://www.springframework.org/osgi</url>
 </project>
