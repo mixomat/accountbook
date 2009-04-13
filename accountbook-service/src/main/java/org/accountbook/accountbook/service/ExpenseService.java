@@ -20,6 +20,6 @@ public interface ExpenseService {
 	 * @param user
 	 *            the associated user for the newly created expense
 	 */
-	Expense createExpenseForUser(User user);
+	Expense createExpenseForUser(Double amount, User user);
 
 }

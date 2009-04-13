@@ -28,10 +28,11 @@ public class ExpenseServiceBeanTest {
 	@Test
 	public void testCreateExpenseForUser() throws Exception {
 		User user = new User("marc");
-		Expense expense = expenseService.createExpenseForUser(user);
+		Expense expense = expenseService.createExpenseForUser(13.49,user);
 		
 		assertNotNull("expense should not be null", expense);
 		assertNotNull("expense should be in persisted state", expense.getUser());
 		assertEquals("user name should match", "marc", expense.getUser().getName());
+		assertEquals("expense amount should match", new Double(13.49)	,expense.getAmount());
 	}
 }

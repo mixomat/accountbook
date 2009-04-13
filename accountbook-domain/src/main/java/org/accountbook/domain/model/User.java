@@ -70,4 +70,11 @@ public class User extends BaseEntity<User> implements Entity<User>{
 		getExpenses().add(expense);
 	}
 
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
+
 }

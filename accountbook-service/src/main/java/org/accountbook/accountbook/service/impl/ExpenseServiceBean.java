@@ -22,10 +22,12 @@ public class ExpenseServiceBean implements ExpenseService {
 	/**
 	 * @see org.accountbook.accountbook.service.ExpenseService#createExpenseForUser(org.accountbook.domain.model.User)
 	 */
-	public Expense createExpenseForUser(User user) {
+	public Expense createExpenseForUser(Double amount, User user) {
 		Validate.notNull(user, "user should not be null");
+		Validate.notNull(amount, "amount should not be null");
 		
 		Expense expense = new Expense();
+		expense.setAmount(amount);
 		expense.setUser(user);
 		
 		expenseRepository.save(expense);
