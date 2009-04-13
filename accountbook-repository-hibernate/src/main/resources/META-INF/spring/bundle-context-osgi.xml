@@ -6,6 +6,6 @@
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
 
     <osgi:reference id="dataSource" interface="javax.sql.DataSource" />
-    <osgi:service id="expenseRepository" ref="expenseRepository" interface="org.accountbook.repository.hibernate.ExpenseRepository" />
+    <osgi:service id="expenseRepositoryBean" auto-export="class-hierarchy" ref="expenseRepository" interface="org.accountbook.repository.hibernate.ExpenseRepository" />
 	
 </beans>
