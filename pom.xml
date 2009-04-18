@@ -15,7 +15,7 @@
   </modules>
 	<properties>
 		<slf4j.version>1.5.6</slf4j.version>
-		<spring.maven.artifact.version>2.5.5.A</spring.maven.artifact.version>
+		<spring.maven.artifact.version>3.0.0.M2</spring.maven.artifact.version>
 		<spring.osgi.version>1.1.2.B</spring.osgi.version>
 		<equinox.ver>3.5.0.v20090311-1300</equinox.ver>
 		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.1.RELEASE/pickup</spring.dm.server.path>

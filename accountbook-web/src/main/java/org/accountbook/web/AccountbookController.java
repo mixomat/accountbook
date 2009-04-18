@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AccountbookController {
 	
 	private static Logger logger = LoggerFactory.getLogger(AccountbookController.class);
+	
 	private User marc = new User("marc");
 
 	@Autowired
@@ -26,7 +27,7 @@ public class AccountbookController {
 	
 	@RequestMapping("/expense.htm")
 	public String expenses(ModelMap model) {
-		logger.info("creating expense for user {}",marc);
+		logger.debug("creating expense for user {}",marc);
 		expenseService.createExpenseForUser(12.0,marc);
 		
 		return "expense";
