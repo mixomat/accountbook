@@ -2,8 +2,11 @@ package org.accountbook.repository.hibernate.internal;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.accountbook.domain.model.Expense;
 import org.accountbook.domain.model.User;
+import org.accountbook.repository.hibernate.ExpenseRepository;
 import org.accountbook.repository.hibernate.Repository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +25,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class HibernateExpenseRepositoryTest {
 
 	@Autowired
-	Repository<Expense> expenseRepository;
+	ExpenseRepository expenseRepository;
 	
 	@Test
 	public void testFindWithBasicMappings() throws Exception {
@@ -78,6 +81,20 @@ public class HibernateExpenseRepositoryTest {
 		for (Expense testExpense : marc.getExpenses()) {
 			assertTrue(testExpense.isCleared());
 		}
+	}
+	
+	@Test
+	public void testFindByUser() throws Exception {
+		User marc = new User("marc");
+		Expense expense = new Expense();
+		expense.setUser(marc);
+		expense.setAmount(203.30);
+		expenseRepository.save(expense);
+		
+		List<Expense> expenses = expenseRepository.findByUser(marc);
+		
+		assertNotNull(expenses);
+		assertEquals(marc.getName(), expenses.get(0).getUser().getName());
 	}
 	
 	

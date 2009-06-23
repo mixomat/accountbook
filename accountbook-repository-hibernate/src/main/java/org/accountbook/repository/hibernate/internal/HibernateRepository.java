@@ -17,7 +17,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 public abstract class HibernateRepository<T extends Entity<T>> implements
 		Repository<T> {
 
-	private HibernateTemplate hibernateTemplate;
+	protected HibernateTemplate hibernateTemplate;
 
 	private Class<T> persistentClass;
 	
