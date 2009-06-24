@@ -9,6 +9,6 @@ Import-Package: javax.sql;version="[0.0.0,1.0.0)",
  org.hibernate.proxy;version="[3.2.6.ga,3.3.0)"
 Import-Library: org.springframework.spring;version="[2.5.5.A,2.6.0)"
 Import-Template: org.accountbook.domain.*;version="1.0.0",
- org.hibernate;version="[3.2.6.ga,3.3.0)",
+ org.hibernate.*;version="[3.2.6.ga,3.3.0)",
  org.springframework.orm.hibernate3;version="[2.5.5.A,2.6.0)"
 Excluded-Exports: org.accountbook.repository.hibernate.internal

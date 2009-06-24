@@ -1,6 +1,9 @@
-package org.accountbook.web;
+	package org.accountbook.web;
+
+import java.util.List;
 
 import org.accountbook.accountbook.service.ExpenseService;
+import org.accountbook.domain.model.Expense;
 import org.accountbook.domain.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +32,9 @@ public class AccountbookController {
 	public String expenses(ModelMap model) {
 		logger.debug("creating expense for user {}",marc);
 		expenseService.createExpenseForUser(12.0,marc);
+		List<Expense> expenses = expenseService.getAllExpensesForUser(marc);
 		
+		model.addAttribute("expenses", expenses);
 		return "expense";
 	}
 }

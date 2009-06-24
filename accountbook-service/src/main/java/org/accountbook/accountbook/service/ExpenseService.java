@@ -3,6 +3,8 @@
  */
 package org.accountbook.accountbook.service;
 
+import java.util.List;
+
 import org.accountbook.domain.model.Expense;
 import org.accountbook.domain.model.User;
 
@@ -21,5 +23,14 @@ public interface ExpenseService {
 	 *            the associated user for the newly created expense
 	 */
 	Expense createExpenseForUser(Double amount, User user);
+
+	/**
+	 * Retrieves a list of expenses for a given user.
+	 * 
+	 * @param user
+	 *            a user entity.
+	 * @return a list of expenses for the given user.
+	 */
+	List<Expense> getAllExpensesForUser(User user);
 
 }
