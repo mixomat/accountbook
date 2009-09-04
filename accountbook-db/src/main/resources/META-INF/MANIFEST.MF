@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: accountbook db module
+Import-Bundle: com.springsource.org.hsqldb;version="[1.8.0.9,1.9.0)"
+Import-Package: javax.sql;version="[0.0.0,1.0.0)",org.apache.commons.d
+ bcp;version="[1.2.2.osgi,1.2.3)",org.springframework.beans.factory.an
+ notation;version="[3.0.0.CI-282,3.1.0)"
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.accountbook.db
+Tool: Bundlor 1.0.0.BUILD-20090616142719
+Export-Package: org.accountbook.db.impl;version="1.0.0";uses:="org.jun
+ it,org.junit.runner,org.springframework.beans.factory.annotation,org.
+ springframework.test.context"
+Bundle-Version: 1.0.0
+
