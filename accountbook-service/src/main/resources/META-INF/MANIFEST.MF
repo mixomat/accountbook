@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Name: accountbook service module
-Import-Package: org.accountbook.domain.model;version="[1.0.0,1.1.0)",o
- rg.accountbook.repository.hibernate;version="[1.0.0,1.1.0)",org.apach
- e.commons.lang;version="[2.4.0,2.5.0)",org.apache.log4j
+Import-Package: org.accountbook.domain;version="[1.0.0,1.1.0)",org.acc
+ ountbook.domain.model;version="[1.0.0,1.1.0)",org.accountbook.reposit
+ ory.hibernate;version="[1.0.0,1.1.0)",org.apache.commons.lang;version
+ ="[2.4.0,2.5.0)",org.apache.log4j
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.accountbook.service
 Tool: Bundlor 1.0.0.BUILD-20090616142719

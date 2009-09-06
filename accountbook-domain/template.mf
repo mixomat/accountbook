@@ -3,6 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Version: 1.0.0
 Bundle-Name: accountbook domain model
 Bundle-SymbolicName: org.accountbook.domain
-Export-Package: org.accountbook.domain.model;version="1.0.0", org.accountbook.domain;version="1.0.0"
-Import-Bundle: org.springframework.core; version="[3.0.0.CI-282,3.1.0)"
+Export-Package: org.accountbook.domain; version="1.0.0", org.accountbook.domain.model; version="1.0.0"
 Excluded-Imports: org.junit.*
