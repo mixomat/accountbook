@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-Name: accountbook web module  
+Import-Library: org.springframework.spring;version="[3.0.0.CI-282,3.1.
+ 0)"
+Web-ContextPath: accountbook
+Import-Package: org.accountbook.accountbook.service;version="1.0.0",or
+ g.accountbook.domain.model;version="1.0.0",org.apache.log4j,org.slf4j
+ ;version="[1.5.0,1.6.0)",org.springframework.beans.factory.annotation
+ ;version="[3.0.0.CI-282,3.1.0)",org.springframework.stereotype;versio
+ n="[3.0.0.CI-282,3.1.0)",org.springframework.ui;version="[3.0.0.CI-28
+ 2,3.1.0)",org.springframework.web.bind.annotation;version="[3.0.0.CI-
+ 282,3.1.0)",org.springframework.web.servlet.view;version="[3.0.0.CI-2
+ 82,3.1.0)"
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.accountbook.web
+Module-Type: Web
+Tool: Bundlor 1.0.0.BUILD-20090616142719
+Export-Package: org.accountbook.web;version="1.0.0";uses:="org.junit,o
+ rg.springframework.beans.factory.annotation,org.springframework.stere
+ otype,org.springframework.ui,org.springframework.web.bind.annotation"
+ ,org.accountbook.web.internal;version="1.0.0"
+Bundle-Version: 1.0.0
+
