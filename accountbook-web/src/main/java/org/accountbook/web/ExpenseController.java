@@ -23,7 +23,7 @@ public class ExpenseController {
 	private ExpenseService expenseService;
 	
 	
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public String expenses(ModelMap model) {
 		model.addAttribute("expenses", expenseService.getAllExpensesForUser(marc));
 		return "expense";
