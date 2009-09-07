@@ -98,4 +98,14 @@ public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
 	private void clear() {
 		setCleared(true);
 	}
+
+	@Override
+	public String toString() {
+		return String
+				.format(
+						"Expense [amount=%s, category=%s, cleared=%s, description=%s, id=%s]",
+						amount, category, cleared, description, id);
+	}
+	
+	
 }
