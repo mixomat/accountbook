@@ -33,4 +33,11 @@ public interface ExpenseService {
 	 */
 	List<Expense> getAllExpensesForUser(User user);
 
+	/**
+	 * Retrieves all expenses.
+	 * 
+	 * @return a list of all expenses.
+	 */
+	List<Expense> getAllExpenses();
+
 }

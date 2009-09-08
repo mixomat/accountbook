@@ -27,13 +27,12 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 				.getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 
-	@SuppressWarnings("unchecked")
 	public T find(Long id) {
 		return (T) hibernateTemplate.get(persistentClass, id);
 	}
 
 	public List<T> findAll() {
-		return null;
+		return hibernateTemplate.loadAll(persistentClass);
 	}
 
 	public void save(T entity) {

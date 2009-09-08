@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.accountbook.accountbook.service.impl;
 
 import java.util.List;
@@ -19,7 +16,7 @@ import org.apache.commons.lang.Validate;
  */
 public class ExpenseServiceBean implements ExpenseService {
 
-	ExpenseRepository expenseRepository;
+	public ExpenseRepository expenseRepository;
 	
 	/**
 	 * @see org.accountbook.accountbook.service.ExpenseService#createExpenseForUser(org.accountbook.domain.model.User)
@@ -43,9 +40,16 @@ public class ExpenseServiceBean implements ExpenseService {
 		return expenseRepository.findByUser(user);
 	}
 
+	/**
+	 * @see org.accountbook.accountbook.service.ExpenseService#getAllExpenses()
+	 */
+	public List<Expense> getAllExpenses() {
+		return expenseRepository.findAll();
+	}
+
 	public void setExpenseRepository(ExpenseRepository expenseRepository) {
 		this.expenseRepository = expenseRepository;
 	}
-
+	
 	
 }
