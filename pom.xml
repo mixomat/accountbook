@@ -12,13 +12,13 @@
 		<module>accountbook-repository-hibernate</module>
 		<module>accountbook-service</module>
 		<module>accountbook-web</module>
-  </modules>
+	</modules>
 	<properties>
 		<slf4j.version>1.5.6</slf4j.version>
 		<spring.maven.artifact.version>3.0.0.M3</spring.maven.artifact.version>
 		<spring.osgi.version>1.1.2.B</spring.osgi.version>
 		<equinox.ver>3.5.0.v20090311-1300</equinox.ver>
-		<spring.dm.server.path>/Users/marc/projects/springsource-dm-server-1.0.1.RELEASE/pickup</spring.dm.server.path>
+		<spring.dm.server.path>/Users/marc/projects/appserver/springsource-dm-server-2.0.0.M4/pickup</spring.dm.server.path>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -31,33 +31,6 @@
 						<target>1.5</target>
 					</configuration>
 				</plugin>
-				<!-- 
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.3</version>
-					<executions>
-						<execution>
-							<id>copy-resources</id>
-							<phase>install</phase>
-							<goals>
-								<goal>copy-resources</goal>
-							</goals>
-							<configuration>
-								<outputDirectory>${spring.dm.server.path}</outputDirectory>
-								<resources>
-									<resource>
-										<directory>target/</directory>
-										<includes>
-											<include>${project.build.finalName}.jar</include>
-										</includes>
-									</resource>
-								</resources>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-				 -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -80,6 +53,23 @@
 						<goals>
 							<goal>transform</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dmbundle-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<pickupDirectory>${spring.dm.server.path}</pickupDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<phase>install</phase>
 					</execution>
 				</executions>
 			</plugin>
@@ -112,7 +102,7 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 
-	<!-- test scoped dependencies -->
+		<!-- test scoped dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
