@@ -103,8 +103,8 @@ public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
 	public String toString() {
 		return String
 				.format(
-						"Expense [amount=%s, category=%s, cleared=%s, description=%s, id=%s]",
-						amount, category, cleared, description, id);
+						"Expense [amount=%s, category=%s, cleared=%s, description=%s, id=%s, user=%s]",
+						amount, category, cleared, description, id, user);
 	}
 	
 	

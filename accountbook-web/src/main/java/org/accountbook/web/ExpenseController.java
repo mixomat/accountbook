@@ -1,4 +1,4 @@
-	package org.accountbook.web;
+package org.accountbook.web;
 
 import org.accountbook.accountbook.service.ExpenseService;
 import org.accountbook.domain.model.User;
