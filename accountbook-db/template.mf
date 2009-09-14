@@ -4,8 +4,6 @@ Bundle-Version: 1.0.0
 Bundle-Name: accountbook db module
 Bundle-SymbolicName: org.accountbook.db
 Import-Bundle: com.springsource.org.hsqldb;version="[1.8.0.9,1.9.0)"
-Import-Template: javax.sql;version="0",
- org.apache.commons.dbcp;version="[1.2.2.osgi,1.2.3)", org.apache.log4j; version="[1.2.15,1.3.0)"
- org.hsqldb.*;version="[1.8.0.9,1.9.0)", org.springframework.beans.*; version="[3.0.0.CI-282,3.1.0)"
+Import-Template: javax.sql;version="0",org.apache.commons.dbcp;version="[1.2.2.osgi,1.2.3)",org.apache.log4j; version="[1.2.15,1.3.0)", org.hsqldb.*;version="[1.8.0.9,1.9.0)", org.springframework.beans.*; version="[3.0.0.CI-282,3.1.0)"
 Excluded-Imports: org.junit.*, org.springframework.test.*
 
