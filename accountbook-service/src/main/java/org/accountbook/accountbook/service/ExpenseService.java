@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.accountbook.accountbook.service;
 
 import java.util.List;
@@ -23,6 +20,14 @@ public interface ExpenseService {
 	 *            the associated user for the newly created expense
 	 */
 	Expense createExpenseForUser(Double amount, User user);
+	
+	/**
+	 * Creates a new expense entity for the given user with name.
+	 * 
+	 * @param amount the expense amount
+	 * @param name the user name
+	 */
+	Expense createExpenseForUserName(Double amount, String name);
 
 	/**
 	 * Retrieves a list of expenses for a given user.

@@ -5,6 +5,7 @@
 
 	<bean id="expenseService" class="org.accountbook.accountbook.service.impl.ExpenseServiceBean">
 		<property name="expenseRepository" ref="expenseRepository" />
+		<property name="userRepository" ref="userRepository" />
 	</bean>
 
 </beans>

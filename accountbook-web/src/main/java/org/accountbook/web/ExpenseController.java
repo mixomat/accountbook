@@ -37,4 +37,11 @@ public class ExpenseController {
 		model.addAttribute("expenses", expenseService.getAllExpensesForUser(marc));
 		return "expense";
 	}
+	
+	@RequestMapping(value = "/add/{amount}/user/{name}")
+	public String addExpenseForUser(@PathVariable("amount") Double amount, @PathVariable("name") String name) {
+		
+		expenseService.createExpenseForUserName(amount,name);
+		return "expense";
+	}
 }

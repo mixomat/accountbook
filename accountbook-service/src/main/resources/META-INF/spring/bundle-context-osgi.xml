@@ -7,6 +7,7 @@
 
 
 	<osgi:reference id="expenseRepository" interface="org.accountbook.repository.hibernate.ExpenseRepository" />
+	<osgi:reference id="userRepository" interface="org.accountbook.repository.hibernate.UserRepository" />
 	<osgi:service id="expenseServiceBean" ref="expenseService" interface="org.accountbook.accountbook.service.ExpenseService" />
 
 </beans>
