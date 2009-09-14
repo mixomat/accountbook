@@ -7,5 +7,6 @@
 
     <osgi:reference id="dataSource" interface="javax.sql.DataSource" />
     <osgi:service id="expenseRepositoryBean" auto-export="class-hierarchy" ref="expenseRepository" interface="org.accountbook.repository.hibernate.ExpenseRepository" />
+	 <osgi:service id="userRepositoryBean" auto-export="class-hierarchy" ref="userRepository" interface="org.accountbook.repository.hibernate.UserRepository" />
 	
 </beans>

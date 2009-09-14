@@ -17,7 +17,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 public abstract class HibernateRepository<T extends Entity<T>> implements
 		Repository<T> {
 
-	protected HibernateTemplate hibernateTemplate;
+	public HibernateTemplate hibernateTemplate;
 
 	private Class<T> persistentClass;
 	
@@ -33,6 +33,11 @@ public abstract class HibernateRepository<T extends Entity<T>> implements
 
 	public List<T> findAll() {
 		return hibernateTemplate.loadAll(persistentClass);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<T> findByExample(T entity) {
+		return hibernateTemplate.findByExample(entity);
 	}
 
 	public void save(T entity) {

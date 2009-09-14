@@ -30,5 +30,8 @@
 	</bean>
 	<bean id="expenseRepository" class="org.accountbook.repository.hibernate.internal.HibernateExpenseRepository" >
 		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>	
+	</bean>
+	<bean id="userRepository" class="org.accountbook.repository.hibernate.internal.HibernateUserRepository">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 </beans>

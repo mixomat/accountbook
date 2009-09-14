@@ -7,7 +7,6 @@ import java.util.List;
 import org.accountbook.domain.model.Expense;
 import org.accountbook.domain.model.User;
 import org.accountbook.repository.hibernate.ExpenseRepository;
-import org.accountbook.repository.hibernate.Repository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

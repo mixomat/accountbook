@@ -29,6 +29,14 @@ public interface Repository<T extends Entity<T>> {
 	List<T> findAll();
 
 	/**
+	 * Load entities by provided example entity.
+	 * 
+	 * @param entity an example entity
+	 * @return list of loaded entities
+	 */
+	List<T> findByExample(T entity);
+
+	/**
 	 * Persists the given <code>entity</code>.
 	 * 
 	 * @param entity
@@ -56,4 +64,6 @@ public interface Repository<T extends Entity<T>> {
 	 * Flushes the current database session.
 	 */
 	void flush();
+
+
 }
