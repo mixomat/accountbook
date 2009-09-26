@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Class-Path: 
+Bundle-Name: accountbook hibernate repository module
+Import-Library: org.springframework.spring;version="[3.0.0.CI-282,3.1.
+ 0)"
+Import-Package: javax.sql;version="0",org.accountbook.domain;version="
+ [1.0.0,1.1.0)",org.accountbook.domain.model;version="[1.0.0,1.1.0)",o
+ rg.apache.log4j,org.hibernate;version="[3.2.6.ga,3.3.0)",org.hibernat
+ e.cfg;version="[3.2.6.ga,3.3.0)",org.hibernate.criterion;version="[3.
+ 2.6.ga,3.3.0)",org.hibernate.tool.hbm2ddl;version="[3.2.6.ga,3.3.0)",
+ org.hsqldb,org.springframework.beans.factory.annotation,org.springfra
+ mework.orm.hibernate3;version="[3.0.0.CI-282,3.1.0)"
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.accountbook.repository.hibernate
+Tool: Bundlor 1.0.0.BUILD-20090616142719
+Export-Package: org.accountbook.repository.hibernate;version="1.0.0",o
+ rg.accountbook.repository.hibernate.internal;version="1.0.0";uses:="o
+ rg.accountbook.domain.model,org.accountbook.repository.hibernate,org.
+ hibernate,org.junit,org.junit.runner,org.springframework.beans.factor
+ y.annotation,org.springframework.test.context",org.hibernate.export;v
+ ersion="1.0.0";uses:="org.junit,org.junit.runner,org.springframework.
+ beans.factory.annotation,org.springframework.orm.hibernate3,org.sprin
+ gframework.test.context"
+Bundle-Version: 1.0.0
+

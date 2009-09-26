@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: 
+Bundle-Name: accountbook service module
+Import-Package: org.accountbook.domain;version="[1.0.0,1.1.0)",org.acc
+ ountbook.domain.model;version="[1.0.0,1.1.0)",org.accountbook.reposit
+ ory.hibernate;version="[1.0.0,1.1.0)",org.apache.commons.lang;version
+ ="[2.4.0,2.5.0)",org.apache.log4j
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.accountbook.service
+Tool: Bundlor 1.0.0.BUILD-20090616142719
+Export-Package: org.accountbook.accountbook.service;version="1.0.0";us
+ es:="org.accountbook.domain.model",org.accountbook.accountbook.servic
+ e.impl;version="1.0.0";uses:="org.accountbook.accountbook.service,org
+ .accountbook.domain.model,org.accountbook.repository.hibernate,org.ju
+ nit"
+Bundle-Version: 1.0.0
+

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.mixomat</groupId>
 	<artifactId>accountbook</artifactId>
@@ -15,10 +16,10 @@
 	</modules>
 	<properties>
 		<slf4j.version>1.5.6</slf4j.version>
-		<spring.maven.artifact.version>3.0.0.M3</spring.maven.artifact.version>
+		<spring.maven.artifact.version>3.0.0.M4</spring.maven.artifact.version>
 		<spring.osgi.version>1.1.2.B</spring.osgi.version>
 		<equinox.ver>3.5.0.v20090311-1300</equinox.ver>
-		<spring.dm.server.path>/Users/marc/projects/appserver/springsource-dm-server-2.0.0.M4/pickup</spring.dm.server.path>
+		<spring.dm.server.path>/Users/marc/projects/appserver/springsource-dm-server/pickup</spring.dm.server.path>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -46,7 +47,7 @@
 			<plugin>
 				<groupId>com.springsource.bundlor</groupId>
 				<artifactId>com.springsource.bundlor.maven</artifactId>
-				<version>1.0.0.M2</version>
+				<version>1.0.0.M5</version>
 				<executions>
 					<execution>
 						<id>bundlor</id>
@@ -104,9 +105,9 @@
 
 		<!-- test scoped dependencies -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.6</version>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+			<version>4.6.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -119,12 +120,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.test</artifactId>
 			<version>${spring.maven.artifact.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.test</artifactId>
-			<version>${spring.osgi.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

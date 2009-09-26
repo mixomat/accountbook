@@ -46,12 +46,6 @@
 		</dependency>
 		
 		<!-- test scoped dependencies -->
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>com.springsource.org.junit</artifactId>
-            <version>4.5.0</version>
-            <scope>test</scope>
-        </dependency>
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>com.springsource.org.hsqldb</artifactId>

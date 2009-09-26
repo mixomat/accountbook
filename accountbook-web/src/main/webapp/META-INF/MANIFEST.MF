@@ -1,9 +1,8 @@
 Manifest-Version: 1.0
 Import-Library: org.springframework.spring;version="[3.0.0.CI-282,3.1.
  0)"
-Web-DispatcherServletUrlPatterns: /
-Import-Bundle: com.springsource.org.codehaus.jackson.mapper;version="[
- 1.0.0,1.1.0)"
+Import-Bundle: com.springsource.com.thoughtworks.xstream;version="[1.3
+ .0,1.3.0]"
 Import-Package: com.springsource.server.web.dm;version="[2.0.0,3.0.0)"
  ,javax.servlet.jsp.jstl.core;version="[1.1.2,1.2.0)",org.accountbook.
  accountbook.service;version="1.0.0",org.accountbook.domain.model;vers
@@ -11,7 +10,9 @@ Import-Package: com.springsource.server.web.dm;version="[2.0.0,3.0.0)"
  ringframework.beans.factory.annotation;version="[3.0.0.CI-282,3.1.0)"
  ,org.springframework.stereotype;version="[3.0.0.CI-282,3.1.0)",org.sp
  ringframework.ui;version="[3.0.0.CI-282,3.1.0)",org.springframework.w
- eb.bind.annotation;version="[3.0.0.CI-282,3.1.0)"
+ eb.bind.annotation;version="[3.0.0.CI-282,3.1.0)",org.springframework
+ .web.context;version="[3.0.0.CI-282,3.1.0)",org.springframework.web.s
+ ervlet;version="[3.0.0.CI-282,3.1.0)"
 Application-TraceLevels: *=verbose
 Export-Package: org.accountbook.web;version="1.0.0";uses:="org.junit,o
  rg.springframework.beans.factory.annotation,org.springframework.stere
@@ -19,6 +20,7 @@ Export-Package: org.accountbook.web;version="1.0.0";uses:="org.junit,o
  ,org.accountbook.web.internal;version="1.0.0"
 Bundle-Version: 1.0.0
 Bundle-Name: accountbook web module  
+Class-Path: 
 Web-ContextPath: accountbook
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.accountbook.web
