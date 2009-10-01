@@ -13,6 +13,9 @@ public class Percentage implements ValueObject<Percentage>{
 
 	private Double amount;
 	
+	public Percentage() {
+	}
+	
 	public Percentage(Double amount) {
 		this.amount = amount;
 	}

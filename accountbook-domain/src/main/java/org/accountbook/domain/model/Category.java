@@ -12,6 +12,9 @@ public class Category implements ValueObject<Category>{
 	
 	private String name;
 	private Percentage percentage;
+	
+	public Category() {
+	}
 
 	public Category(Double percentage) {
 		this("", percentage);

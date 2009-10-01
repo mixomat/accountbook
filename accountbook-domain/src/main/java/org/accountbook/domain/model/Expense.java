@@ -24,6 +24,8 @@ public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
 
 	private User user;
 	
+	public Expense() {}
+	
 	/**
 	 * @see org.accountbook.domain.BaseEntity#getId()
 	 */
