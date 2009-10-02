@@ -2,4 +2,6 @@
 <faceted-project>
   <runtime name="SpringSource dm Server (Runtime) v2.0"/>
   <installed facet="com.springsource.server.bundle" version="1.0"/>
+  <installed facet="jst.java" version="6.0"/>
+  <installed facet="jst.web" version="2.4"/>
 </faceted-project>

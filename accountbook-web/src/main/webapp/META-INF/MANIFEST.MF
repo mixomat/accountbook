@@ -8,16 +8,19 @@ Import-Package: com.springsource.server.web.dm;version="[2.0.0,3.0.0)"
  accountbook.service;version="1.0.0",org.accountbook.domain.model;vers
  ion="1.0.0",org.apache.log4j,org.slf4j;version="[1.5.0,1.6.0)",org.sp
  ringframework.beans.factory.annotation;version="[3.0.0.CI-282,3.1.0)"
- ,org.springframework.stereotype;version="[3.0.0.CI-282,3.1.0)",org.sp
- ringframework.ui;version="[3.0.0.CI-282,3.1.0)",org.springframework.w
- eb.bind.annotation;version="[3.0.0.CI-282,3.1.0)",org.springframework
- .web.context;version="[3.0.0.CI-282,3.1.0)",org.springframework.web.s
- ervlet;version="[3.0.0.CI-282,3.1.0)"
+ ,org.springframework.oxm;version="[3.0.0.CI-282,3.1.0)",org.springfra
+ mework.stereotype;version="[3.0.0.CI-282,3.1.0)",org.springframework.
+ ui;version="[3.0.0.CI-282,3.1.0)",org.springframework.web.bind.annota
+ tion;version="[3.0.0.CI-282,3.1.0)",org.springframework.web.context;v
+ ersion="[3.0.0.CI-282,3.1.0)",org.springframework.web.servlet;version
+ ="[3.0.0.CI-282,3.1.0)"
 Application-TraceLevels: *=verbose
 Export-Package: org.accountbook.web;version="1.0.0";uses:="org.junit,o
  rg.springframework.beans.factory.annotation,org.springframework.stere
  otype,org.springframework.ui,org.springframework.web.bind.annotation"
- ,org.accountbook.web.internal;version="1.0.0"
+ ,org.accountbook.web.internal;version="1.0.0",org.accountbook.web.oxm
+ ;version="1.0.0";uses:="org.junit,org.junit.runner,org.springframewor
+ k.beans.factory.annotation,org.springframework.test.context"
 Bundle-Version: 1.0.0
 Bundle-Name: accountbook web module  
 Class-Path: 

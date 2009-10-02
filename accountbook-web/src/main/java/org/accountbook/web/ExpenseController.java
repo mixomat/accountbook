@@ -25,7 +25,7 @@ public class ExpenseController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String expenses(ModelMap model) {
-		model.addAttribute("expenses",expenseService.getAllExpenses());
+		model.addAttribute("expenses",expenseService.getAllExpenses().get(0));
 		return "expense";
 	}
 	

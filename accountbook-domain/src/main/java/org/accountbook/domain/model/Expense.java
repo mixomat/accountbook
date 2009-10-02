@@ -2,6 +2,8 @@ package org.accountbook.domain.model;
 
 import java.util.Set;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.accountbook.domain.BaseEntity;
 import org.accountbook.domain.Entity;
 
@@ -10,6 +12,7 @@ import org.accountbook.domain.Entity;
  * 
  * @author marc
  */
+@XmlRootElement
 public class Expense extends BaseEntity<Expense> implements Entity<Expense>{
 	
 	private Long id;

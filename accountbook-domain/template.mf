@@ -5,3 +5,4 @@ Bundle-Name: accountbook domain model
 Bundle-SymbolicName: org.accountbook.domain
 Export-Package: org.accountbook.domain; version="1.0.0", org.accountbook.domain.model; version="1.0.0"
 Excluded-Imports: org.junit.*
+Import-Template: javax.xml.bind.annotation.*; version="[2.1.7,3.0.0)"
