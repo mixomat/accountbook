@@ -23,9 +23,16 @@ public class ExpenseController {
 	private ExpenseService expenseService;
 	
 	
+	@RequestMapping(value="/list", method = RequestMethod.GET)
+	public String listExpenses(ModelMap model) {
+		ExpenseList expenseList = new ExpenseList(expenseService.getAllExpenses());
+		model.addAttribute("expenses",expenseList);
+		return "expense";
+	}
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public String expenses(ModelMap model) {
-		model.addAttribute("expenses",expenseService.getAllExpenses().get(0));
+		model.addAttribute("expenses",expenseService.getAllExpenses());
 		return "expense";
 	}
 	

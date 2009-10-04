@@ -1,8 +1,7 @@
 Manifest-Version: 1.0
 Class-Path: 
 Bundle-Name: accountbook domain model
-Import-Package: javax.xml.bind.annotation;version="[2.1.7,3.0.0)",org.
- apache.log4j
+Import-Package: org.apache.log4j
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.accountbook.domain
 Tool: Bundlor 1.0.0.BUILD-20090616142719
